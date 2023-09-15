@@ -18,11 +18,11 @@ jobs:
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v18
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}                                                                                               
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}                                                                                               
           application_name: ebs-actions
           environment_name: Ebs-actions-env
           existing_bucket_name: elasticbeanstalk-ap-south-1-162105714209
-          aws-region: ap-south-1 # Modify to match your desired region    
+          region: ap-south-1 # Modify to match your desired region    
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
