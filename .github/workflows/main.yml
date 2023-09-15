@@ -20,8 +20,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}                                                                                               
-          application_name: ebs-actions
-          environment_name: Ebs-actions-env
+          application_name: java-EBS
+          environment_name: Java-EBS-env
           existing_bucket_name: elasticbeanstalk-ap-south-1-162105714209
           region: ap-south-1 # Modify to match your desired region    
           version_label: ${{ github.sha }}
